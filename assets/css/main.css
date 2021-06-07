@@ -3526,6 +3526,7 @@ body .menu {
   background: linear-gradient(#ffa38e 0%, #ff613d 100%);
   height: 90px;
   position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -3589,7 +3590,7 @@ body .reloj {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #ffa38e;
+  color: #FFC0B3;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3664,7 +3665,7 @@ body .tempsuelo .suelominima {
   }
 }
 
-.infoapp {
+.appinformacion {
   padding: 4em;
   background-color: #ff613d;
   display: -ms-grid;
@@ -3674,12 +3675,12 @@ body .tempsuelo .suelominima {
           justify-content: center;
 }
 
-.infoapp p {
-  width: 700px;
+.appinformacion div {
+  margin-top: 0.7em;
 }
 
 @media screen and (max-width: 600px) {
-  .infoapp {
+  .appinformacion {
     font-size: 12px;
   }
   p {
@@ -3698,5 +3699,57 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2em;
+  color: #ff3737;
+}
+
+.guardadosbarra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 25px;
+  color: #FFC0B3;
+  background-color: #ff613d;
+  height: 300px;
+  padding: 2em;
+}
+
+.guardadosbarra .temperaturaaire {
+  margin-right: 4em;
+}
+
+.guardadosbarra .temperaturasuelo {
+  margin-right: 4em;
+}
+
+.guardadosbarra .presion {
+  margin-right: 4em;
+}
+
+@media screen and (max-width: 600px) {
+  .guardadosbarra {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 15px;
+    color: #FFC0B3;
+    background-color: #ff613d;
+    height: 300px;
+    padding: 2em;
+  }
+  .guardadosbarra .temperaturaaire {
+    margin-right: 2em;
+  }
+  .guardadosbarra .temperaturasuelo {
+    margin-right: 2em;
+  }
+  .guardadosbarra .presion {
+    margin-right: 2em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

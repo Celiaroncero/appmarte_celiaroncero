@@ -75,34 +75,32 @@ function getTime(){
 
 window.addEventListener ( 'load', () => {
     fetch('https://mars-weather-rems.netlify.app/rems.json')
-    .then(res => res.json())
-    .then(res => {
+    .then(dat => dat .json())
+    .then(dat => {
 
-        /////// TEMPERATURA AIRE ////////
+        /////// DATOS TEMPERATURA AIRE ////////
         let aireMinima = document.getElementById("aireminima");
-        let itemOne= `${res.weather_report.magnitudes[0].min_temp}ºC`   
+        let itemOne= `${dat .weather_report.magnitudes[0].min_temp}ºC`   
         aireMinima.innerHTML += itemOne;
 
         let aireMaxima = document.getElementById("airemaxima");
-        let itemTwo= `${res.weather_report.magnitudes[0].max_temp}ºC`  
+        let itemTwo= `${dat .weather_report.magnitudes[0].max_temp}ºC`  
         aireMaxima.innerHTML += itemTwo;
 
-        /////// PRESIÓN ////////
+        /////// DATOS PRESIÓN ////////
         let presionDato = document.getElementById("valorpresion");
-        let itemThree= `${res.weather_report.magnitudes[0].pressure}Pa`
+        let itemThree= `${dat .weather_report.magnitudes[0].pressure}Pa`
         presionDato.innerHTML += itemThree;
 
-         /////// TEMPERATURA ////////
+         /////// DATOS TEMPERATURA SUELO ////////
         let sueloMinima = document.getElementById("suelominima");
-        let itemFour= `${res.weather_report.magnitudes[0].min_gts_temp}ºC`   
+        let itemFour= `${dat .weather_report.magnitudes[0].min_gts_temp}ºC`   
         sueloMinima.innerHTML += itemFour;
 
         let sueloMaxima = document.getElementById("suelomaxima");
-        let itemFive= `${res.weather_report.magnitudes[0].max_gts_temp}ºC`   
+        let itemFive= `${dat .weather_report.magnitudes[0].max_gts_temp}ºC`   
         sueloMaxima.innerHTML += itemFive;
-
-    });
-       
+    });   
 });
 
    
